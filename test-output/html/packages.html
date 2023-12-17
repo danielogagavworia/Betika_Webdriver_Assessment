@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link rel="stylesheet" href="css/reportng.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="js/reportng.js"></script>
+  <script type="text/javascript">  
+    	$(document).ready(function () {  
+	            $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click(function () {  
+	                    $(this).siblings('.child-' + this.id).toggle();  
+	                });
+	                $('tr.parent')  
+	                .css("cursor", "pointer")  
+	                .attr("title", "Click to expand/collapse")  
+	                .click();
+	    });
+	    function changeIcon(elementId) {
+			if ($('#'+elementId).hasClass('glyphicon glyphicon-minus')){
+				$('#'+elementId).removeClass('glyphicon glyphicon-minus').toggleClass('glyphicon glyphicon-plus');
+			}else{
+				$('#'+elementId).removeClass('glyphicon glyphicon-plus').toggleClass('glyphicon glyphicon-minus');
+			}
+		}
+		function showReport(element,report){$(element).children(".tipFrame").attr('src', report).show();}
+		function hideReport(element){$(element).children(".tipFrame").hide();}
+    </script>
+</head>
+<body onload="return false;" onkeypress="hidePassPackages();">
+<div class="row">
+	<div class="col-xs-12">
+	<h3 class="normal" style="float: left;">Package Results</h3><br>
+	<button id="hideResults" type="button" class="btn-danger" onclick="hidePassPackages(this);" style="float: right;" title="Click or Press Any key to Hide/Show All Passed Suites">Show Only Failures</button>
+    </div>
+</div>
+<br>
+<div class="well well-large">
+<table class="table table-bordered" width="100%;" id="features">
+	<thead>
+   		<tr>
+   			<th width="30px"></th>
+   			<th scope="col" style="vertical-align:middle;text-align:left;">Package</th>
+   		 	<th scope="col" width="50px">Duration&nbsp;&nbsp;&nbsp;</th>
+   		 	<th scope="col" width="30px">Passed&nbsp;&nbsp;&nbsp;</th>
+    		<th scope="col" width="30px">Skipped&nbsp;&nbsp;&nbsp;</th>
+    		<th scope="col" width="30px">Failed&nbsp;&nbsp;&nbsp;</th>
+	    	  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr class="parent" id="row0" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-00f2d10a-7366-41ae-b56b-cd265dc3afa8'); ">
+<td><span id="span-00f2d10a-7366-41ae-b56b-cd265dc3afa8" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Alterna_Survey_links_QTW_1534</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row0" style="display: table-row;"><td></td><td><a href="suite1_test8_results.html">testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row1" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-c2819612-d48d-4717-b83c-c5a1ced38b22'); ">
+<td><span id="span-c2819612-d48d-4717-b83c-c5a1ced38b22" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Announcement_Card_QTW_1507</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row1" style="display: table-row;"><td></td><td><a href="suite1_test7_results.html">testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row2" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-05f7c036-2785-4851-9146-cdb06fc60584'); ">
+<td><span id="span-05f7c036-2785-4851-9146-cdb06fc60584" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Earnings_History_QTW_1568</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row2" style="display: table-row;"><td></td><td><a href="suite1_test2_results.html">testcases.Earnings_History_QTW_1568.Earnings_History</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row3" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-482f5a78-348a-4b8c-b202-9705a9a7eef0'); ">
+<td><span id="span-482f5a78-348a-4b8c-b202-9705a9a7eef0" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Quickteller_Homes_Hyperlink_QTW_1493</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row3" style="display: table-row;"><td></td><td><a href="suite1_test6_results.html">testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row4" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-5c329ed0-7884-430c-9267-cba890a24aa5'); ">
+<td><span id="span-5c329ed0-7884-430c-9267-cba890a24aa5" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Senders_Name_QTW_1513</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row4" style="display: table-row;"><td></td><td><a href="suite1_test5_results.html">testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row5" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-3f4264b5-a64d-4c98-8cec-ece1afeb0308'); ">
+<td><span id="span-3f4264b5-a64d-4c98-8cec-ece1afeb0308" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Transaction_History_QTW_1494</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row5" style="display: table-row;"><td></td><td><a href="suite1_test4_results.html">testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row6" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-660b8e89-3598-4492-b108-c500af9ab094'); ">
+<td><span id="span-660b8e89-3598-4492-b108-c500af9ab094" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Transport_Return_Trip_QTW_1564</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row6" style="display: table-row;"><td></td><td><a href="suite1_test1_results.html">testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row7" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-37ceaf25-d77c-490c-b501-7662f5096a32'); ">
+<td><span id="span-37ceaf25-d77c-490c-b501-7662f5096a32" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.Web_Receipt_Mod_QTW_1555</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row7" style="display: table-row;"><td></td><td><a href="suite1_test3_results.html">testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td><tr class="parent" id="row8" title="Click to expand/collapse" style="cursor: pointer;" onclick="changeIcon('span-ae9e37a5-4cad-4dc8-b3a5-758b869d8bb2'); ">
+<td><span id="span-ae9e37a5-4cad-4dc8-b3a5-758b869d8bb2" class="glyphicon glyphicon-minus" style="color:blue"></span></td>
+<td align="left">testcases.infowre_frm_wlthhub_QTW1533</td><td align="center">00:42:49</td><td align="center" class="passed number">35</td><td align="center" class="skipped number">8</td><td align="center" class="failed number">1</td></tr>
+<tr class="child-row8" style="display: table-row;"><td></td><td><a href="suite1_test9_results.html">testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</a></td><td align="center">00:42:49</td><td align="center" class="passedCell">35</td><td align="center" class="skippedCell">8</td><td align="center" class="failedCell">1</td>
+
+  	</tbody>
+</table>
+</div>
+</body>
+</html>

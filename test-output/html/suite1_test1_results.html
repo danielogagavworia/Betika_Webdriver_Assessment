@@ -1,0 +1,2189 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/reportngClass.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/reportngClass.js"></script>
+  <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="js/json-min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.tablesorter').tablesorter({sortList: [[0,0]]});
+	});
+  </script>
+</head>
+<body onload="doParse(); return false;" onkeypress="collapseExpand();">
+<div class="well well-large">
+	<b>Test Info</>
+	<table class="table">
+	  <tr>
+	    <th>Test Name : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Test name</span>
+			</div>
+	    </th>
+	    <th id="testNameId">UAT Test</th> 
+	  </tr>
+	  <tr>
+	    <th>Test Class : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testClassId')"/>
+	    		<span class="tooltiptextCustom">Copy full path Class name</span>
+			</div>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#testClassNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Class name</span>
+			</div>
+	    </th> 
+	    <th id="testClassId">testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip<br>testcases.Earnings_History_QTW_1568.Earnings_History<br>testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555<br>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513<br>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493<br>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534<br>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br></th>
+	    <th id="testClassNameId" hidden="true">Transport_Return_Trip<br>Earnings_History<br>Web_Receipt_Mod_QTW_1555<br>Transaction_History_QTW1494<br>Senders_Name_QTW_1513<br>QTHomesHyperlinkQTW1493<br>AnnouncementCardQTW1507<br>Alterna_Survey_links_QTW_1534<br>Infoware_Wlthub_QTW_1533<br></th>
+	  </tr>
+	  <tr>
+	    <th>Suite Name : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite name</span>
+			</div>
+		</th>
+	    <th id="suiteNameId">Innovation Test Suite</th>
+	  </tr>
+	  <tr>
+	    <th>Suite XML : </th>
+	    <th>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteXMLId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite full path name</span>
+			</div>
+	    	<div class="tooltipCustom">
+	    		<img src="images/copy.png" width="10" height="15" alt="Copy to Clipboard" onclick="copyToClipboard('#suiteXMLNameId')"/>
+	    		<span class="tooltiptextCustom">Copy Suite file name</span>
+			</div>
+	    </th> 
+	  	<th id="suiteXMLId">C:\Users\daniel.ogagavworia\Documents\Selenium Auto\QuickTellerInnovation\Runner.xml</th>
+	  	<th id="suiteXMLNameId" hidden="true">Runner.xml</th>
+	  </tr>
+	  	  <tr>
+	    <th>Total Time : </th>
+	    <th></th>
+	    <th>00:42:49</th> 
+	  </tr>
+	  <tr>
+	    <th>Total Steps : </th>
+	   	<th></th>
+	    <th>43</th> 
+	  </tr>
+	  <tr>
+	    <th>Status : </th>
+	    <th></th>
+	    <th><font color="red">FAIL</font></th> 
+	  </tr>
+	</table>
+</div>
+<div class="well well-large">
+	<div class="row">
+		<div class="col-xs-12">
+	        <div class="text-right">
+	            <button id="hideResults" type="button" class="btn-danger" onclick="collapseExpand(this);" onkeypress="collapseExpand(this);" class="btn pull-right" title="Click or Press Any key to collapse/expand All Failed Tests and Configuration Methods">Show Only Failures</button>
+	        </div>
+	    </div>
+	</div>
+	<table class="tablesorter" border="1">
+		<thead>
+		<tr>
+		<th class="headerTime">Time</th>
+		<th class="headerTime" width="12%">Info</th>
+		<th class="headerTime" width="88%">Test</th>
+		</tr>
+		</thead>
+		<tbody>
+		
+									<tr>
+		<td class="time">1698918193133</td>
+		<td class="header failedConfig" colspan="4" onClick="toggleElement('1b2cb97c-75b1-4eed-b59d-cecafb0d310c','block');changeSingleIcon('span-1b2cb97c-75b1-4eed-b59d-cecafb0d310c');" title="Click to expand/collapse" style="cursor: pointer;">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-1b2cb97c-75b1-4eed-b59d-cecafb0d310c' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+			<tr>
+		<td class="time">1698918193133</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>181.901s</span><br>
+		</td>
+		<td class="resultConfiguration">
+										<div class="stackTrace" id="1b2cb97c-75b1-4eed-b59d-cecafb0d310c">
+								<a href="javascript:toggleElement('exception-1b2cb97c-75b1-4eed-b59d-cecafb0d310c','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br>
+		    <div class="stackTrace" id="exception-1b2cb97c-75b1-4eed-b59d-cecafb0d310c">
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br>
+							org.testng.TestRunner.run(TestRunner.java:621)<br>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br>
+							org.testng.TestNG.run(TestNG.java:1082)<br>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+									    <b>Caused by: </b> <a href="javascript:toggleElement('causedBy-1b2cb97c-75b1-4eed-b59d-cecafb0d310c','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br>
+			    <div class="stackTrace" id="causedBy-1b2cb97c-75b1-4eed-b59d-cecafb0d310c">
+									java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br>
+									java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br>
+									org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br>
+									org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br>
+									org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br>
+									org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br>
+									org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br>
+									org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br>
+									org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br>
+									org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br>
+									org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br>
+									org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br>
+									org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br>
+									base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br>
+									java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br>
+									java.base/java.lang.reflect.Method.invoke(Method.java:580)<br>
+									org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br>
+									org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br>
+									org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br>
+									org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br>
+									org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br>
+									org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br>
+									org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br>
+									org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br>
+									org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br>
+									org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br>
+									org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br>
+									org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br>
+									java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br>
+									org.testng.TestRunner.privateRun(TestRunner.java:848)<br>
+									org.testng.TestRunner.run(TestRunner.java:621)<br>
+									org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br>
+									org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br>
+									org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br>
+									org.testng.SuiteRunner.run(SuiteRunner.java:336)<br>
+									org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>
+									org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br>
+									org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br>
+									org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br>
+									org.testng.TestNG.runSuites(TestNG.java:1114)<br>
+									org.testng.TestNG.run(TestNG.java:1082)<br>
+									org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br>
+									org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>
+									org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+								</div>
+						</div>
+				</div>
+		</td>
+	</tr>
+						
+					    				<tr>
+		<td class="time">1698918375040</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('1e01ca53-5ab5-4c74-9a46-ac632dd1cf8e','block');changeSingleIcon('span-1e01ca53-5ab5-4c74-9a46-ac632dd1cf8e');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-1e01ca53-5ab5-4c74-9a46-ac632dd1cf8e' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375040</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="1e01ca53-5ab5-4c74-9a46-ac632dd1cf8e">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375063</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('a42ebf6b-bfda-418b-ba38-c47f387a0393','block');changeSingleIcon('span-a42ebf6b-bfda-418b-ba38-c47f387a0393');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-a42ebf6b-bfda-418b-ba38-c47f387a0393' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375063</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="a42ebf6b-bfda-418b-ba38-c47f387a0393">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375071</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('a9cf8e24-2f62-4078-b070-d94633226b3f','block');changeSingleIcon('span-a9cf8e24-2f62-4078-b070-d94633226b3f');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-a9cf8e24-2f62-4078-b070-d94633226b3f' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375071</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="a9cf8e24-2f62-4078-b070-d94633226b3f">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375054</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('5b71d984-8c79-4371-b821-f935a02e61ed','block');changeSingleIcon('span-5b71d984-8c79-4371-b821-f935a02e61ed');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-5b71d984-8c79-4371-b821-f935a02e61ed' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375054</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="5b71d984-8c79-4371-b821-f935a02e61ed">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375072</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('dba4f1f9-b994-4a2f-b2d6-8db00ba2fae4','block');changeSingleIcon('span-dba4f1f9-b994-4a2f-b2d6-8db00ba2fae4');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-dba4f1f9-b994-4a2f-b2d6-8db00ba2fae4' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375072</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="dba4f1f9-b994-4a2f-b2d6-8db00ba2fae4">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375055</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('93ff244d-fff4-4168-afeb-96eaa67c370f','block');changeSingleIcon('span-93ff244d-fff4-4168-afeb-96eaa67c370f');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-93ff244d-fff4-4168-afeb-96eaa67c370f' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375055</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="93ff244d-fff4-4168-afeb-96eaa67c370f">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375067</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('c08f3034-e7b5-4dd8-8367-57f3914319eb','block');changeSingleIcon('span-c08f3034-e7b5-4dd8-8367-57f3914319eb');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-c08f3034-e7b5-4dd8-8367-57f3914319eb' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375067</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="c08f3034-e7b5-4dd8-8367-57f3914319eb">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375052</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('51482c15-014d-4c37-94d2-959cf0ef7d19','block');changeSingleIcon('span-51482c15-014d-4c37-94d2-959cf0ef7d19');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-51482c15-014d-4c37-94d2-959cf0ef7d19' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375052</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="51482c15-014d-4c37-94d2-959cf0ef7d19">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375041</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('676c3b2c-4214-4136-8daa-728ca7de1b83','block');changeSingleIcon('span-676c3b2c-4214-4136-8daa-728ca7de1b83');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-676c3b2c-4214-4136-8daa-728ca7de1b83' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375041</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="676c3b2c-4214-4136-8daa-728ca7de1b83">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375050</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('e7802627-4275-4636-9ee8-bff74778c523','block');changeSingleIcon('span-e7802627-4275-4636-9ee8-bff74778c523');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-e7802627-4275-4636-9ee8-bff74778c523' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375050</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="e7802627-4275-4636-9ee8-bff74778c523">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375060</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('1d28f2e4-02d1-4643-bb3d-6c78bf0daf7f','block');changeSingleIcon('span-1d28f2e4-02d1-4643-bb3d-6c78bf0daf7f');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@BeforeMethod &nbsp;&nbsp;<span id='span-1d28f2e4-02d1-4643-bb3d-6c78bf0daf7f' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375060</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>launch_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="1d28f2e4-02d1-4643-bb3d-6c78bf0daf7f">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375058</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('ddca8e07-f64e-4ba6-922f-067d405c5fef','block');changeSingleIcon('span-ddca8e07-f64e-4ba6-922f-067d405c5fef');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-ddca8e07-f64e-4ba6-922f-067d405c5fef' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375058</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="ddca8e07-f64e-4ba6-922f-067d405c5fef">
+							</div>
+		</td>
+	</tr>
+				<tr>
+		<td class="time">1698918375076</td>
+		<td class="header skippedConfig" colspan="4" onClick="toggleElement('d59366d6-9ad8-4a85-b53c-b47c7fa28b1f','block');changeSingleIcon('span-d59366d6-9ad8-4a85-b53c-b47c7fa28b1f');" title="Click to expand/collapse">
+		<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+		<div style="float:right;">@AfterMethod &nbsp;&nbsp;<span id='span-d59366d6-9ad8-4a85-b53c-b47c7fa28b1f' class="glyphicon glyphicon-menu-down"></span></div>
+		</td>
+	</tr>
+		<tr>
+		<td class="time">1698918375076</td>
+		<td class="methodConfiguration">
+				<span class="description"><b>Class: </b>class base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup</span><br>
+		<span class="description"><b>Method: </b>close_browser</span><br>
+				<span class="duration"><b>Duration: </b>0.000s</span><br>
+		</td>
+		<td class="resultConfiguration">
+				 														<div class="stackTrace" id="d59366d6-9ad8-4a85-b53c-b47c7fa28b1f">
+							</div>
+		</td>
+	</tr>
+	    	    		
+																																												
+											<tr>
+	<td class="time">1698918477596</td>
+	<td class="header failed" colspan="4" onClick="toggleElement('fbb87510-b997-49df-92e9-d47a700ea86d','block');changeSingleIcon('span-fbb87510-b997-49df-92e9-d47a700ea86d');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-fbb87510-b997-49df-92e9-d47a700ea86d' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918477596</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>After_Registration</span><br>
+			<span class="description"><b>Description: </b>Verify that the alterna survey is suggested to user after a successful registration</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>18.241s</span><br>
+	</td>
+	<td class="result">
+						<div class="noCollapse" id="fbb87510-b997-49df-92e9-d47a700ea86d" style="display: block;">
+												The Method Name is: After_Registration<br>
+												The cause is: java.lang.AssertionError: The following asserts failed:<br/>
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]<br>
+									<a href="javascript:toggleElement('exception-fbb87510-b997-49df-92e9-d47a700ea86d','block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]</b></a><br/>
+		<div class="stackTrace" id="exception-fbb87510-b997-49df-92e9-d47a700ea86d">
+					org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)<br/>
+					org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)<br/>
+					stepDefinition.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_Methods.Registration(Alterna_Survey_links_Methods.java:65)<br/>
+					testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration(Alterna_Survey_links_QTW_1534.java:12)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br/>
+					org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+		</td>
+	</div>
+</tr>
+						
+											<tr>
+	<td class="time">1698918426608</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('c16238af-4b44-487d-94ae-d2321fc96858','block');changeSingleIcon('span-c16238af-4b44-487d-94ae-d2321fc96858');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-c16238af-4b44-487d-94ae-d2321fc96858' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918426608</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>After_Registration</span><br>
+			<span class="description"><b>Description: </b>Verify that the alterna survey is suggested to user after a successful registration</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>18.821s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="c16238af-4b44-487d-94ae-d2321fc96858" style="display: block;">
+												The Method Name is: After_Registration<br>
+									<a href="javascript:toggleElement('exception-c16238af-4b44-487d-94ae-d2321fc96858','block')" title="Click to expand/collapse"><b>java.lang.AssertionError: The following asserts failed:<br/>
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]</b></a><br/>
+		<div class="stackTrace" id="exception-c16238af-4b44-487d-94ae-d2321fc96858">
+					org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)<br/>
+					org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)<br/>
+					stepDefinition.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_Methods.Registration(Alterna_Survey_links_Methods.java:65)<br/>
+					testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration(Alterna_Survey_links_QTW_1534.java:12)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+		</td>
+	</div>
+</tr>
+									<tr>
+	<td class="time">1698918375073</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6','block');changeSingleIcon('span-f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375073</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>AnnouncementCardisNotDisplayedonsubsequentLogin</span><br>
+			<span class="description"><b>Description: </b>Verify that the announcement card is not displayed on subsequent logins.</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>13</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6" style="display: block;">
+						<a href="javascript:toggleElement('exception-f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-f7ee8eed-4bbb-46af-b3eb-a4fc4eeccea6">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1698918375038</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('9c4653a7-9bda-4701-ae72-c631fbb988ea','block');changeSingleIcon('span-9c4653a7-9bda-4701-ae72-c631fbb988ea');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-9c4653a7-9bda-4701-ae72-c631fbb988ea' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375038</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>AnnouncementCardSwitchingisPaused</span><br>
+			<span class="description"><b>Description: </b>Verify that the slide pauses when user hover the mouse over the slide</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>7</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="9c4653a7-9bda-4701-ae72-c631fbb988ea" style="display: block;">
+												The Method Name is: NavigateToReferAfriendLinkCreated<br>
+									<a href="javascript:toggleElement('exception-9c4653a7-9bda-4701-ae72-c631fbb988ea','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-9c4653a7-9bda-4701-ae72-c631fbb988ea">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-9c4653a7-9bda-4701-ae72-c631fbb988ea','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-9c4653a7-9bda-4701-ae72-c631fbb988ea">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1698918375060</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('10de4424-c187-448f-91e9-e78ed4837859','block');changeSingleIcon('span-10de4424-c187-448f-91e9-e78ed4837859');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-10de4424-c187-448f-91e9-e78ed4837859' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375060</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>cancelAnnouncementCard</span><br>
+			<span class="description"><b>Description: </b>Verify that user can cancel announcement card</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>11</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="10de4424-c187-448f-91e9-e78ed4837859" style="display: block;">
+												The Method Name is: SkiptheAnnouncementCard<br>
+									<a href="javascript:toggleElement('exception-10de4424-c187-448f-91e9-e78ed4837859','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-10de4424-c187-448f-91e9-e78ed4837859">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-10de4424-c187-448f-91e9-e78ed4837859','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-10de4424-c187-448f-91e9-e78ed4837859">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1698918375042</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('67ff3d11-c82a-4491-a3dd-9f7acf444915','block');changeSingleIcon('span-67ff3d11-c82a-4491-a3dd-9f7acf444915');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test &nbsp;&nbsp;<span id='span-67ff3d11-c82a-4491-a3dd-9f7acf444915' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375042</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>NavigateToReferAfriendLinkCreated</span><br>
+			<span class="description"><b>Description: </b>Verify that user can navigate to Refer A friend page from the Announcement Card.(Already has Nickname/Refer Link Created)</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>8</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="67ff3d11-c82a-4491-a3dd-9f7acf444915" style="display: block;">
+												The Method Name is: NavigateToQTTransport<br>
+									<a href="javascript:toggleElement('exception-67ff3d11-c82a-4491-a3dd-9f7acf444915','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-67ff3d11-c82a-4491-a3dd-9f7acf444915">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-67ff3d11-c82a-4491-a3dd-9f7acf444915','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-67ff3d11-c82a-4491-a3dd-9f7acf444915">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1698918375052</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('c4ff317a-5f68-4e56-ab3b-2fa8102c92a0','block');changeSingleIcon('span-c4ff317a-5f68-4e56-ab3b-2fa8102c92a0');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-c4ff317a-5f68-4e56-ab3b-2fa8102c92a0' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375052</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>NavigateToQTTransport</span><br>
+			<span class="description"><b>Description: </b>Verify that user can navigate to transport page from the Announcement Card</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>9</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="c4ff317a-5f68-4e56-ab3b-2fa8102c92a0" style="display: block;">
+												The Method Name is: NavigateToQTLoans<br>
+									<a href="javascript:toggleElement('exception-c4ff317a-5f68-4e56-ab3b-2fa8102c92a0','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-c4ff317a-5f68-4e56-ab3b-2fa8102c92a0">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-c4ff317a-5f68-4e56-ab3b-2fa8102c92a0','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-c4ff317a-5f68-4e56-ab3b-2fa8102c92a0">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1698918375069</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('d59cfb22-b37b-47ac-a66f-b3c41c835b82','block');changeSingleIcon('span-d59cfb22-b37b-47ac-a66f-b3c41c835b82');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-d59cfb22-b37b-47ac-a66f-b3c41c835b82' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375069</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>SkiptheAnnouncementCard</span><br>
+			<span class="description"><b>Description: </b>Verify that user can skip announcement card successfully</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>12</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="d59cfb22-b37b-47ac-a66f-b3c41c835b82" style="display: block;">
+												The Method Name is: AnnouncementCardisNotDisplayedonsubsequentLogin<br>
+									<a href="javascript:toggleElement('exception-d59cfb22-b37b-47ac-a66f-b3c41c835b82','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-d59cfb22-b37b-47ac-a66f-b3c41c835b82">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-d59cfb22-b37b-47ac-a66f-b3c41c835b82','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-d59cfb22-b37b-47ac-a66f-b3c41c835b82">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+					<tr>
+	<td class="time">1698918375056</td>
+	<td class="header skipped" colspan="4" onClick="toggleElement('a5a6a4b3-23c9-45ca-993d-170a74706bce','block');changeSingleIcon('span-a5a6a4b3-23c9-45ca-993d-170a74706bce');" title="Click to expand/collapse" style="cursor: pointer;">
+	<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+	<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-a5a6a4b3-23c9-45ca-993d-170a74706bce' class="glyphicon glyphicon-menu-down"></span></div>
+	</td>
+	</tr>
+<tr>
+	<td class="time">1698918375056</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>NavigateToQTLoans</span><br>
+			<span class="description"><b>Description: </b>Verify that user can navigate to loans page from the Announcement Card</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>10</font></span><br>
+						<span class="duration"><b>Duration: </b>0.000s</span><br>
+	</td>
+	<td class="result">
+		 									<div class="stackTrace" id="a5a6a4b3-23c9-45ca-993d-170a74706bce" style="display: block;">
+												The Method Name is: cancelAnnouncementCard<br>
+									<a href="javascript:toggleElement('exception-a5a6a4b3-23c9-45ca-993d-170a74706bce','block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException<br/>
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 870480fda8d0f30e006725d6a8b5fe10</b></a><br/>
+		<div class="stackTrace" id="exception-a5a6a4b3-23c9-45ca-993d-170a74706bce">
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)<br/>
+					org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+					org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+					org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+					org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+					org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+					org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+					org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+					base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+					java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+					java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+					org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+					org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+					org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+					org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+					org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+					org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+					org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+					org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+					java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+					org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+					org.testng.TestRunner.run(TestRunner.java:621)<br/>
+					org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+					org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+					org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+					org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+					org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+					org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+					org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+					org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+					org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+					org.testng.TestNG.run(TestNG.java:1082)<br/>
+					org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+					org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+					org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+							<b>Caused by: </b> <a href="javascript:toggleElement('causedBy-a5a6a4b3-23c9-45ca-993d-170a74706bce','block')" title="Click to expand/collapse">java.util.concurrent.TimeoutException</a><br/>
+			<div class="stackTrace" id="causedBy-a5a6a4b3-23c9-45ca-993d-170a74706bce">
+							java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)<br/>
+							java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)<br/>
+							org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)<br/>
+							org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)<br/>
+							org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)<br/>
+							org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)<br/>
+							org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)<br/>
+							org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)<br/>
+							org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br/>
+							org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)<br/>
+							base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)<br/>
+							java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br/>
+							java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)<br/>
+							org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)<br/>
+							org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)<br/>
+							org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)<br/>
+							org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br/>
+							org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)<br/>
+							org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)<br/>
+							org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)<br/>
+							org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br/>
+							java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>
+							org.testng.TestRunner.privateRun(TestRunner.java:848)<br/>
+							org.testng.TestRunner.run(TestRunner.java:621)<br/>
+							org.testng.SuiteRunner.runTest(SuiteRunner.java:443)<br/>
+							org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)<br/>
+							org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)<br/>
+							org.testng.SuiteRunner.run(SuiteRunner.java:336)<br/>
+							org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>
+							org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br/>
+							org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)<br/>
+							org.testng.TestNG.runSuitesLocally(TestNG.java:1200)<br/>
+							org.testng.TestNG.runSuites(TestNG.java:1114)<br/>
+							org.testng.TestNG.run(TestNG.java:1082)<br/>
+							org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)<br/>
+							org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br/>
+							org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br/>
+						</div>
+				</div>
+		</td>
+	</div>
+</tr>
+						
+												<tr>
+			<td class="time">1698918042561</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('02bcf312-5c5a-4cb4-bcaf-120836cea8f7','block');changeSingleIcon('span-02bcf312-5c5a-4cb4-bcaf-120836cea8f7');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-02bcf312-5c5a-4cb4-bcaf-120836cea8f7' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918042561</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>AnnouncementCardSwitchingResumed</span><br>
+			<span class="description"><b>Description: </b>Verify that the slide switches to the next slide after the mouse has been removed from the slide</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+						<span class="duration"><b>Duration: </b>30.436s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="02bcf312-5c5a-4cb4-bcaf-120836cea8f7" style="display: block;">
+												The Method Name is: AnnouncementCardSwitchingResumed<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917918292</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('a7876e72-0d65-41ba-933b-e0e1de5017b8','block');changeSingleIcon('span-a7876e72-0d65-41ba-933b-e0e1de5017b8');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-a7876e72-0d65-41ba-933b-e0e1de5017b8' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917918292</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>AnnouncementCardIsPresentInQT</span><br>
+			<span class="description"><b>Description: </b>Verify that Accouncement Card is present in QT upon initial login</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>8.430s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="a7876e72-0d65-41ba-933b-e0e1de5017b8" style="display: block;">
+												The Method Name is: AnnouncementCardIsPresentInQT<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918093492</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('7e32ccf1-d363-46f1-8588-d70bbeca2865','block');changeSingleIcon('span-7e32ccf1-d363-46f1-8588-d70bbeca2865');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-7e32ccf1-d363-46f1-8588-d70bbeca2865' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918093492</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TotheNextSlide</span><br>
+			<span class="description"><b>Description: </b>Verify that the user can move to the next slides manually</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>4</font></span><br>
+						<span class="duration"><b>Duration: </b>15.350s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="7e32ccf1-d363-46f1-8588-d70bbeca2865" style="display: block;">
+												The Method Name is: TotheNextSlide<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918183387</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('5c542196-f427-4475-a1cd-989ee488f759','block');changeSingleIcon('span-5c542196-f427-4475-a1cd-989ee488f759');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-5c542196-f427-4475-a1cd-989ee488f759' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918183387</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>NavigateToQTbot</span><br>
+			<span class="description"><b>Description: </b>Verify that user can navigate to QT Bot from the Announcement Card</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>6</font></span><br>
+						<span class="duration"><b>Duration: </b>9.044s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="5c542196-f427-4475-a1cd-989ee488f759" style="display: block;">
+												The Method Name is: NavigateToQTbot<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918138790</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('f359796e-f6b8-4034-b73c-47ad9d0357aa','block');changeSingleIcon('span-f359796e-f6b8-4034-b73c-47ad9d0357aa');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-f359796e-f6b8-4034-b73c-47ad9d0357aa' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918138790</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TothePreviousSlide</span><br>
+			<span class="description"><b>Description: </b>Verify that the user can move to the previous slides manually</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>5</font></span><br>
+						<span class="duration"><b>Duration: </b>28.136s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="f359796e-f6b8-4034-b73c-47ad9d0357aa" style="display: block;">
+												The Method Name is: TothePreviousSlide<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917979553</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('ded453ba-5d6e-4489-b95b-a233d18ef113','block');changeSingleIcon('span-ded453ba-5d6e-4489-b95b-a233d18ef113');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</div>
+			<div style="float:right;">@Test &nbsp;&nbsp;<span id='span-ded453ba-5d6e-4489-b95b-a233d18ef113' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917979553</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>NavigateToReferAfriendNoLink</span><br>
+			<span class="description"><b>Description: </b>Verify that user can navigate to Refer A friend page from the Announcement Card.(No Nickname/Refer Link Created)</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>14.827s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="ded453ba-5d6e-4489-b95b-a233d18ef113" style="display: block;">
+												The Method Name is: NavigateToReferAfriendNoLink<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698916803066</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('955b63a4-ff4b-4602-b7ae-b6b328b40297','block');changeSingleIcon('span-955b63a4-ff4b-4602-b7ae-b6b328b40297');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-955b63a4-ff4b-4602-b7ae-b6b328b40297' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916803066</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_Six</span><br>
+			<span class="description"><b>Description: </b>Verify that users can sort the earning using the year</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>6</font></span><br>
+						<span class="duration"><b>Duration: </b>24.806s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="955b63a4-ff4b-4602-b7ae-b6b328b40297" style="display: block;">
+												The Method Name is: TestCase_Six<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916609094</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('b381871c-063d-4915-a7d0-9b3bc7ba89eb','block');changeSingleIcon('span-b381871c-063d-4915-a7d0-9b3bc7ba89eb');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-b381871c-063d-4915-a7d0-9b3bc7ba89eb' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916609094</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_Three</span><br>
+			<span class="description"><b>Description: </b>Verify that users can sort the earning from latest to oldest</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+						<span class="duration"><b>Duration: </b>21.099s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="b381871c-063d-4915-a7d0-9b3bc7ba89eb" style="display: block;">
+												The Method Name is: TestCase_Three<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916555918</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('84caefab-a94a-4f0c-95d9-a9f56d8cce95','block');changeSingleIcon('span-84caefab-a94a-4f0c-95d9-a9f56d8cce95');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-84caefab-a94a-4f0c-95d9-a9f56d8cce95' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916555918</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_Two</span><br>
+			<span class="description"><b>Description: </b>Verify that users can view more earnings of pervious campaigns</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>24.182s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="84caefab-a94a-4f0c-95d9-a9f56d8cce95" style="display: block;">
+												The Method Name is: TestCase_Two<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916726599</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('c31cdce2-d126-44be-bb89-e529b7a1ab3d','block');changeSingleIcon('span-c31cdce2-d126-44be-bb89-e529b7a1ab3d');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-c31cdce2-d126-44be-bb89-e529b7a1ab3d' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916726599</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_Five</span><br>
+			<span class="description"><b>Description: </b>Verify that users can sort the earning using the month</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>5</font></span><br>
+						<span class="duration"><b>Duration: </b>27.210s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="c31cdce2-d126-44be-bb89-e529b7a1ab3d" style="display: block;">
+												The Method Name is: TestCase_Five<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916501779</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('d05e342e-a715-4a44-87cb-1de6ced902bc','block');changeSingleIcon('span-d05e342e-a715-4a44-87cb-1de6ced902bc');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-d05e342e-a715-4a44-87cb-1de6ced902bc' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916501779</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_One</span><br>
+			<span class="description"><b>Description: </b>Verify that users can see their earning histroy on the referral dashboard</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>25.714s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="d05e342e-a715-4a44-87cb-1de6ced902bc" style="display: block;">
+												The Method Name is: TestCase_One<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916675335</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('85c3e1e9-d500-47f4-9889-9177b517f797','block');changeSingleIcon('span-85c3e1e9-d500-47f4-9889-9177b517f797');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-85c3e1e9-d500-47f4-9889-9177b517f797' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916675335</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_Four</span><br>
+			<span class="description"><b>Description: </b>Verify that users can sort the earning from oldest to latest</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>4</font></span><br>
+						<span class="duration"><b>Duration: </b>19.851s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="85c3e1e9-d500-47f4-9889-9177b517f797" style="display: block;">
+												The Method Name is: TestCase_Four<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916868412</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('aab67fc7-8c09-49f0-9ec6-afbe2f46b0bb','block');changeSingleIcon('span-aab67fc7-8c09-49f0-9ec6-afbe2f46b0bb');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Earnings_History_QTW_1568.Earnings_History</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-aab67fc7-8c09-49f0-9ec6-afbe2f46b0bb' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916868412</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>TestCase_Seven</span><br>
+			<span class="description"><b>Description: </b>Verify that users can sort the earning using the month and  year</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>7</font></span><br>
+						<span class="duration"><b>Duration: </b>28.543s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="aab67fc7-8c09-49f0-9ec6-afbe2f46b0bb" style="display: block;">
+												The Method Name is: TestCase_Seven<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698917876548</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('40c8a159-1b82-42d6-b58c-25f8957558c7','block');changeSingleIcon('span-40c8a159-1b82-42d6-b58c-25f8957558c7');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-40c8a159-1b82-42d6-b58c-25f8957558c7' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917876548</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>withoutLogin</span><br>
+			<span class="description"><b>Description: </b>Verify that user can access QTH from QT without login</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+						<span class="duration"><b>Duration: </b>13.065s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="40c8a159-1b82-42d6-b58c-25f8957558c7" style="display: block;">
+												The Method Name is: withoutLogin<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917785230</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('558ebb5f-591b-4a49-829a-a6471ee9beee','block');changeSingleIcon('span-558ebb5f-591b-4a49-829a-a6471ee9beee');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-558ebb5f-591b-4a49-829a-a6471ee9beee' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917785230</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>fromAnyPage</span><br>
+			<span class="description"><b>Description: </b>Verify that user can access QTH from QT from another page in QT</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>15.240s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="558ebb5f-591b-4a49-829a-a6471ee9beee" style="display: block;">
+												The Method Name is: fromAnyPage<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917828822</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('00aafc35-61b1-4369-a08a-505930aa88d2','block');changeSingleIcon('span-00aafc35-61b1-4369-a08a-505930aa88d2');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-00aafc35-61b1-4369-a08a-505930aa88d2' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917828822</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>loggedIN</span><br>
+			<span class="description"><b>Description: </b>Verify that user can access QTH from QT while logged in</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>17.252s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="00aafc35-61b1-4369-a08a-505930aa88d2" style="display: block;">
+												The Method Name is: loggedIN<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698917626755</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('0cbe0db3-899a-4949-aec5-ef2e831e5bd6','block');changeSingleIcon('span-0cbe0db3-899a-4949-aec5-ef2e831e5bd6');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-0cbe0db3-899a-4949-aec5-ef2e831e5bd6' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917626755</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>View_Senders_Name_Receipt</span><br>
+			<span class="description"><b>Description: </b>Verify that the sender's name is displayed on the receipt upon successful transfer</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>44.473s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="0cbe0db3-899a-4949-aec5-ef2e831e5bd6" style="display: block;">
+												The Method Name is: View_Senders_Name_Receipt<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917705414</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('c66dbe30-df43-49a1-8692-bfd32d7b30af','block');changeSingleIcon('span-c66dbe30-df43-49a1-8692-bfd32d7b30af');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-c66dbe30-df43-49a1-8692-bfd32d7b30af' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917705414</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>View_Senders_Name_In_History</span><br>
+			<span class="description"><b>Description: </b>Verify that the sender's name is displayed on the transfer receipt in transaction history.</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>52.110s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="c66dbe30-df43-49a1-8692-bfd32d7b30af" style="display: block;">
+												The Method Name is: View_Senders_Name_In_History<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698917274823</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('66b76685-d7e1-4a47-98dd-242ac11dfefc','block');changeSingleIcon('span-66b76685-d7e1-4a47-98dd-242ac11dfefc');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-66b76685-d7e1-4a47-98dd-242ac11dfefc' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917274823</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Request_For_transaction_Statement</span><br>
+			<span class="description"><b>Description: </b>Verify that user is prompted to request for transaction statement</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+						<span class="duration"><b>Duration: </b>28.386s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="66b76685-d7e1-4a47-98dd-242ac11dfefc" style="display: block;">
+												The Method Name is: Request_For_transaction_Statement<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917213428</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('cd56fe9d-0f8d-4c0a-a79a-d7dc2171f783','block');changeSingleIcon('span-cd56fe9d-0f8d-4c0a-a79a-d7dc2171f783');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-cd56fe9d-0f8d-4c0a-a79a-d7dc2171f783' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917213428</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Filter_Transactions</span><br>
+			<span class="description"><b>Description: </b>Verify that user can filter the  transactions history</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>45.419s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="cd56fe9d-0f8d-4c0a-a79a-d7dc2171f783" style="display: block;">
+												The Method Name is: Filter_Transactions<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917138023</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('885cac02-5c9d-48d4-962a-060a661a8330','block');changeSingleIcon('span-885cac02-5c9d-48d4-962a-060a661a8330');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-885cac02-5c9d-48d4-962a-060a661a8330' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917138023</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>SixMonths_Transaction_History</span><br>
+			<span class="description"><b>Description: </b>Verify that user can view transaction history for the period of 6 months</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>27.818s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="885cac02-5c9d-48d4-962a-060a661a8330" style="display: block;">
+												The Method Name is: SixMonths_Transaction_History<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917331467</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('76453e21-479f-46cc-9f95-e2182d22815e','block');changeSingleIcon('span-76453e21-479f-46cc-9f95-e2182d22815e');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-76453e21-479f-46cc-9f95-e2182d22815e' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917331467</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>No_statement_Beyond_SixMonths</span><br>
+			<span class="description"><b>Description: </b>Verify that transaction history beyond 6 months are not displayed on quickteller web</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>4</font></span><br>
+						<span class="duration"><b>Duration: </b>48.022s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="76453e21-479f-46cc-9f95-e2182d22815e" style="display: block;">
+												The Method Name is: No_statement_Beyond_SixMonths<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917410554</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('059cac0a-63cf-414d-bdaf-c7d79ad208bc','block');changeSingleIcon('span-059cac0a-63cf-414d-bdaf-c7d79ad208bc');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-059cac0a-63cf-414d-bdaf-c7d79ad208bc' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917410554</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Navigate_To_Trans_Statement_From_Prompt</span><br>
+			<span class="description"><b>Description: </b>Verify that user is directed to transaction statement page from the prompt message</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>5</font></span><br>
+						<span class="duration"><b>Duration: </b>43.480s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="059cac0a-63cf-414d-bdaf-c7d79ad208bc" style="display: block;">
+												The Method Name is: Navigate_To_Trans_Statement_From_Prompt<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917553259</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('d1b3f681-d715-4cc6-906e-70b6acd12d44','block');changeSingleIcon('span-d1b3f681-d715-4cc6-906e-70b6acd12d44');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-d1b3f681-d715-4cc6-906e-70b6acd12d44' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917553259</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>End_Date_Behind_Start_Date</span><br>
+			<span class="description"><b>Description: </b>Verify the end date cannot be behind or same as start date</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>7</font></span><br>
+						<span class="duration"><b>Duration: </b>44.102s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="d1b3f681-d715-4cc6-906e-70b6acd12d44" style="display: block;">
+												The Method Name is: End_Date_Behind_Start_Date<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917476680</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('cda1c9dd-cd01-4b54-b6d5-df34d1b45ef9','block');changeSingleIcon('span-cda1c9dd-cd01-4b54-b6d5-df34d1b45ef9');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-cda1c9dd-cd01-4b54-b6d5-df34d1b45ef9' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917476680</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Submit_Request_Without_Start_End_Dates</span><br>
+			<span class="description"><b>Description: </b>Verify that user cannot request for transaction statement without entering the start and end dates</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>6</font></span><br>
+						<span class="duration"><b>Duration: </b>45.014s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="cda1c9dd-cd01-4b54-b6d5-df34d1b45ef9" style="display: block;">
+												The Method Name is: Submit_Request_Without_Start_End_Dates<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698916370641</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('c948b96a-cb21-4652-951b-b72ad3e8a88c','block');changeSingleIcon('span-c948b96a-cb21-4652-951b-b72ad3e8a88c');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-c948b96a-cb21-4652-951b-b72ad3e8a88c' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916370641</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Testcase_One</span><br>
+			<span class="description"><b>Description: </b>Verify that user doesnot see return trip as an option when booking a trip for his/her self</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>41.934s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="c948b96a-cb21-4652-951b-b72ad3e8a88c" style="display: block;">
+												The Method Name is: Testcase_One<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698916438261</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('2fa9139e-fa1d-425b-94ed-cda1d758a7b6','block');changeSingleIcon('span-2fa9139e-fa1d-425b-94ed-cda1d758a7b6');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-2fa9139e-fa1d-425b-94ed-cda1d758a7b6' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916438261</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Testcase_Two</span><br>
+			<span class="description"><b>Description: </b>Verify that user doesnot see return trip as an option when booking a trip for someone else</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>41.757s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="2fa9139e-fa1d-425b-94ed-cda1d758a7b6" style="display: block;">
+												The Method Name is: Testcase_Two<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698916948416</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('8602f099-3c14-4bc0-9657-1f21ab9e8b56','block');changeSingleIcon('span-8602f099-3c14-4bc0-9657-1f21ab9e8b56');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-8602f099-3c14-4bc0-9657-1f21ab9e8b56' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698916948416</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Successful_Transaction</span><br>
+			<span class="description"><b>Description: </b>Verify that QT Ads is displayed at the bottom of the receipt after a successful transaction </span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>52.567s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="8602f099-3c14-4bc0-9657-1f21ab9e8b56" style="display: block;">
+												The Method Name is: Successful_Transaction<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698917066502</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('b404f3d7-931f-469e-b0c9-59472ede3b39','block');changeSingleIcon('span-b404f3d7-931f-469e-b0c9-59472ede3b39');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-b404f3d7-931f-469e-b0c9-59472ede3b39' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698917066502</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Transaction_History</span><br>
+			<span class="description"><b>Description: </b>Verify that QT Ads is displayed at the bottom of the receipt from transaction history</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>45.588s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="b404f3d7-931f-469e-b0c9-59472ede3b39" style="display: block;">
+												The Method Name is: Transaction_History<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+										<tr>
+			<td class="time">1698918770485</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('65d205b5-d2f6-4561-a5ed-2081a0254cb9','block');changeSingleIcon('span-65d205b5-d2f6-4561-a5ed-2081a0254cb9');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-65d205b5-d2f6-4561-a5ed-2081a0254cb9' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918770485</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Wealth_Hub_Investement_Page</span><br>
+			<span class="description"><b>Description: </b>Verify that user is redirected to the investments page</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>5</font></span><br>
+						<span class="duration"><b>Duration: </b>36.742s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="65d205b5-d2f6-4561-a5ed-2081a0254cb9" style="display: block;">
+												The Method Name is: Wealth_Hub_Investement_Page<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918559100</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('30c4ca14-0fdd-4391-a521-b12657b73053','block');changeSingleIcon('span-30c4ca14-0fdd-4391-a521-b12657b73053');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-30c4ca14-0fdd-4391-a521-b12657b73053' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918559100</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Return_To_Service_Module</span><br>
+			<span class="description"><b>Description: </b>Verify that users is returned to the service module</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>2</font></span><br>
+						<span class="duration"><b>Duration: </b>34.254s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="30c4ca14-0fdd-4391-a521-b12657b73053" style="display: block;">
+												The Method Name is: Return_To_Service_Module<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918710107</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('7d5f4506-df43-4f74-8035-c42e1ccf3946','block');changeSingleIcon('span-7d5f4506-df43-4f74-8035-c42e1ccf3946');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-7d5f4506-df43-4f74-8035-c42e1ccf3946' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918710107</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Wealth_Hub_Landing_Page</span><br>
+			<span class="description"><b>Description: </b>Verify that user is redirected to wealth hub landing page</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>4</font></span><br>
+						<span class="duration"><b>Duration: </b>28.350s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="7d5f4506-df43-4f74-8035-c42e1ccf3946" style="display: block;">
+												The Method Name is: Wealth_Hub_Landing_Page<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918522098</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('ab642863-c247-48ba-9fb8-ae3d510de455','block');changeSingleIcon('span-ab642863-c247-48ba-9fb8-ae3d510de455');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-ab642863-c247-48ba-9fb8-ae3d510de455' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918522098</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Cannot_Access_Wealthhub</span><br>
+			<span class="description"><b>Description: </b>Verify that users without a verified phone number cannot access wealth hub</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>1</font></span><br>
+						<span class="duration"><b>Duration: </b>16.707s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="ab642863-c247-48ba-9fb8-ae3d510de455" style="display: block;">
+												The Method Name is: Cannot_Access_Wealthhub<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918662700</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('bf227076-b5d8-4078-b712-0bfc188e0208','block');changeSingleIcon('span-bf227076-b5d8-4078-b712-0bfc188e0208');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-bf227076-b5d8-4078-b712-0bfc188e0208' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918662700</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Wealth_Hub_Intro_Page</span><br>
+			<span class="description"><b>Description: </b>Verify that user is redirected to wealth hub introducton page</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>3</font></span><br>
+						<span class="duration"><b>Duration: </b>28.703s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="bf227076-b5d8-4078-b712-0bfc188e0208" style="display: block;">
+												The Method Name is: Wealth_Hub_Intro_Page<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+						<tr>
+			<td class="time">1698918843023</td>
+			<td class="header passed" colspan="4" onClick="toggleElement('62ad8ba9-cadb-48a4-b102-6b712b31be4c','block');changeSingleIcon('span-62ad8ba9-cadb-48a4-b102-6b712b31be4c');" title="Click to expand/collapse" style="cursor: pointer;">
+			<div style="float:left;"><i>Class&nbsp;:&nbsp;</i>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533</div>
+			<div style="float:right;">@Test @ with DataProvider : [""] &nbsp;&nbsp;<span id='span-62ad8ba9-cadb-48a4-b102-6b712b31be4c' class="glyphicon glyphicon-menu-down"></span></div>
+			</td>
+			</tr>
+			<tr>
+	<td class="time">1698918843023</td>
+	<td class="methodTest">
+		<span class="description"><b>Method: </b>Inforware_Iframe</span><br>
+			<span class="description"><b>Description: </b>Verify that user is redirected to infoware iframe Successfully</span><br>
+				<span class="description"><b>Priority: </b><font color='blue'>6</font></span><br>
+						<span class="duration"><b>Duration: </b>50.367s</span><br>
+	</td>
+	<td class="result">
+						<div class="stackTrace" id="62ad8ba9-cadb-48a4-b102-6b712b31be4c" style="display: block;">
+												The Method Name is: Inforware_Iframe<br>
+												The Status is: 1<br>
+								</td>
+	</div>
+</tr>
+					  
+	</tbody>
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,1460 @@
+<html>
+<head>
+<title>TestNG:  UAT Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>UAT Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>35/1/8</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 02 10:12:05 WAT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>2569 seconds (2569200 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace54142591", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace54142591'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>181</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.launch_browser()'><b>launch_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.close_browser()'><b>close_browser</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507</td>
+<td></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration()'><b>After_Registration</b><br>Test class: testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534<br>Test method: Verify that the alterna survey is suggested to user after a successful registration<br/>
+<a href="#Output-1828009511" onClick='toggleBox("Output-1828009511", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1828009511" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1828009511">
+The Method Name is: After_Registration<br/>
+The cause is: java.lang.AssertionError: The following asserts failed:
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]
+	at stepDefinition.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_Methods.Registration(Alterna_Survey_links_Methods.java:65)
+	at testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration(Alterna_Survey_links_QTW_1534.java:12)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1828009511", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1828009511'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at stepDefinition.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_Methods.Registration(Alterna_Survey_links_Methods.java:65)
+	at testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration(Alterna_Survey_links_QTW_1534.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>18</td>
+<td>testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534@53ce1329</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_Seven()'><b>TestCase_Seven</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can sort the earning using the month and  year<br/>
+<a href="#Output-1279095549" onClick='toggleBox("Output-1279095549", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1279095549" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1279095549">
+The Method Name is: TestCase_Seven<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493.loggedIN()'><b>loggedIN</b><br>Test class: testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493<br>Test method: Verify that user can access QTH from QT while logged in<br/>
+<a href="#Output-1172910505" onClick='toggleBox("Output-1172910505", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1172910505" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1172910505">
+The Method Name is: loggedIN<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493@4803b726</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.NavigateToReferAfriendNoLink()'><b>NavigateToReferAfriendNoLink</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can navigate to Refer A friend page from the Announcement Card.(No Nickname/Refer Link Created)<br/>
+<a href="#Output-1625470691" onClick='toggleBox("Output-1625470691", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1625470691" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1625470691">
+The Method Name is: NavigateToReferAfriendNoLink<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.Submit_Request_Without_Start_End_Dates()'><b>Submit_Request_Without_Start_End_Dates</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify that user cannot request for transaction statement without entering the start and end dates<br/>
+<a href="#Output-853313886" onClick='toggleBox("Output-853313886", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-853313886" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-853313886">
+The Method Name is: Submit_Request_Without_Start_End_Dates<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533.Inforware_Iframe()'><b>Inforware_Iframe</b><br>Test class: testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br>Test method: Verify that user is redirected to infoware iframe Successfully<br/>
+<a href="#Output-1644975502" onClick='toggleBox("Output-1644975502", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1644975502" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1644975502">
+The Method Name is: Inforware_Iframe<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>50</td>
+<td>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533@316bcf94</td></tr>
+<tr>
+<td title='testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513.View_Senders_Name_In_History()'><b>View_Senders_Name_In_History</b><br>Test class: testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513<br>Test method: Verify that the sender's name is displayed on the transfer receipt in transaction history.<br/>
+<a href="#Output-1534184690" onClick='toggleBox("Output-1534184690", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1534184690" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1534184690">
+The Method Name is: View_Senders_Name_In_History<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513@f0da945</td></tr>
+<tr>
+<td title='testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493.fromAnyPage()'><b>fromAnyPage</b><br>Test class: testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493<br>Test method: Verify that user can access QTH from QT from another page in QT<br/>
+<a href="#Output-2075380660" onClick='toggleBox("Output-2075380660", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2075380660" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2075380660">
+The Method Name is: fromAnyPage<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493@4803b726</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.TothePreviousSlide()'><b>TothePreviousSlide</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that the user can move to the previous slides manually<br/>
+<a href="#Output-1737064450" onClick='toggleBox("Output-1737064450", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1737064450" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1737064450">
+The Method Name is: TothePreviousSlide<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513.View_Senders_Name_Receipt()'><b>View_Senders_Name_Receipt</b><br>Test class: testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513<br>Test method: Verify that the sender's name is displayed on the receipt upon successful transfer<br/>
+<a href="#Output-1135877305" onClick='toggleBox("Output-1135877305", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1135877305" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1135877305">
+The Method Name is: View_Senders_Name_Receipt<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>testcases.Senders_Name_QTW_1513.Senders_Name_QTW_1513@f0da945</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.End_Date_Behind_Start_Date()'><b>End_Date_Behind_Start_Date</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify the end date cannot be behind or same as start date<br/>
+<a href="#Output-1414507009" onClick='toggleBox("Output-1414507009", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1414507009" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1414507009">
+The Method Name is: End_Date_Behind_Start_Date<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip.Testcase_Two()'><b>Testcase_Two</b><br>Test class: testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip<br>Test method: Verify that user doesnot see return trip as an option when booking a trip for someone else<br/>
+<a href="#Output-214774813" onClick='toggleBox("Output-214774813", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-214774813" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-214774813">
+The Method Name is: Testcase_Two<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip@f736069</td></tr>
+<tr>
+<td title='testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533.Wealth_Hub_Intro_Page()'><b>Wealth_Hub_Intro_Page</b><br>Test class: testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br>Test method: Verify that user is redirected to wealth hub introducton page<br/>
+<a href="#Output-105354646" onClick='toggleBox("Output-105354646", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-105354646" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-105354646">
+The Method Name is: Wealth_Hub_Intro_Page<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533@316bcf94</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.Navigate_To_Trans_Statement_From_Prompt()'><b>Navigate_To_Trans_Statement_From_Prompt</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify that user is directed to transaction statement page from the prompt message<br/>
+<a href="#Output-780607123" onClick='toggleBox("Output-780607123", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-780607123" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-780607123">
+The Method Name is: Navigate_To_Trans_Statement_From_Prompt<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_Four()'><b>TestCase_Four</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can sort the earning from oldest to latest<br/>
+<a href="#Output-491013714" onClick='toggleBox("Output-491013714", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-491013714" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-491013714">
+The Method Name is: TestCase_Four<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.No_statement_Beyond_SixMonths()'><b>No_statement_Beyond_SixMonths</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify that transaction history beyond 6 months are not displayed on quickteller web<br/>
+<a href="#Output-1942990808" onClick='toggleBox("Output-1942990808", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1942990808" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1942990808">
+The Method Name is: No_statement_Beyond_SixMonths<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip.Testcase_One()'><b>Testcase_One</b><br>Test class: testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip<br>Test method: Verify that user doesnot see return trip as an option when booking a trip for his/her self<br/>
+<a href="#Output-2138697198" onClick='toggleBox("Output-2138697198", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2138697198" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2138697198">
+The Method Name is: Testcase_One<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>testcases.Transport_Return_Trip_QTW_1564.Transport_Return_Trip@f736069</td></tr>
+<tr>
+<td title='testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533.Cannot_Access_Wealthhub()'><b>Cannot_Access_Wealthhub</b><br>Test class: testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br>Test method: Verify that users without a verified phone number cannot access wealth hub<br/>
+<a href="#Output-1209700803" onClick='toggleBox("Output-1209700803", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1209700803" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1209700803">
+The Method Name is: Cannot_Access_Wealthhub<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533@316bcf94</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.SixMonths_Transaction_History()'><b>SixMonths_Transaction_History</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify that user can view transaction history for the period of 6 months<br/>
+<a href="#Output-46719126" onClick='toggleBox("Output-46719126", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-46719126" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-46719126">
+The Method Name is: SixMonths_Transaction_History<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>27</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.NavigateToQTbot()'><b>NavigateToQTbot</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can navigate to QT Bot from the Announcement Card<br/>
+<a href="#Output-1071751935" onClick='toggleBox("Output-1071751935", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1071751935" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1071751935">
+The Method Name is: NavigateToQTbot<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_One()'><b>TestCase_One</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can see their earning histroy on the referral dashboard<br/>
+<a href="#Output-350099713" onClick='toggleBox("Output-350099713", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-350099713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-350099713">
+The Method Name is: TestCase_One<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.TotheNextSlide()'><b>TotheNextSlide</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that the user can move to the next slides manually<br/>
+<a href="#Output-717499622" onClick='toggleBox("Output-717499622", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-717499622" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-717499622">
+The Method Name is: TotheNextSlide<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555.Transaction_History()'><b>Transaction_History</b><br>Test class: testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555<br>Test method: Verify that QT Ads is displayed at the bottom of the receipt from transaction history<br/>
+<a href="#Output-993632090" onClick='toggleBox("Output-993632090", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-993632090" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-993632090">
+The Method Name is: Transaction_History<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555@194bcebf</td></tr>
+<tr>
+<td title='testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493.withoutLogin()'><b>withoutLogin</b><br>Test class: testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493<br>Test method: Verify that user can access QTH from QT without login<br/>
+<a href="#Output-281174369" onClick='toggleBox("Output-281174369", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-281174369" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-281174369">
+The Method Name is: withoutLogin<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>testcases.Quickteller_Homes_Hyperlink_QTW_1493.QTHomesHyperlinkQTW1493@4803b726</td></tr>
+<tr>
+<td title='testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555.Successful_Transaction()'><b>Successful_Transaction</b><br>Test class: testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555<br>Test method: Verify that QT Ads is displayed at the bottom of the receipt after a successful transaction <br/>
+<a href="#Output-116893278" onClick='toggleBox("Output-116893278", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-116893278" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-116893278">
+The Method Name is: Successful_Transaction<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>testcases.Web_Receipt_Mod_QTW_1555.Web_Receipt_Mod_QTW_1555@194bcebf</td></tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_Five()'><b>TestCase_Five</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can sort the earning using the month<br/>
+<a href="#Output-1429207620" onClick='toggleBox("Output-1429207620", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1429207620" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1429207620">
+The Method Name is: TestCase_Five<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>27</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533.Wealth_Hub_Landing_Page()'><b>Wealth_Hub_Landing_Page</b><br>Test class: testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br>Test method: Verify that user is redirected to wealth hub landing page<br/>
+<a href="#Output-858743810" onClick='toggleBox("Output-858743810", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-858743810" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-858743810">
+The Method Name is: Wealth_Hub_Landing_Page<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533@316bcf94</td></tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_Two()'><b>TestCase_Two</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can view more earnings of pervious campaigns<br/>
+<a href="#Output-1149650230" onClick='toggleBox("Output-1149650230", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1149650230" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1149650230">
+The Method Name is: TestCase_Two<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_Three()'><b>TestCase_Three</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can sort the earning from latest to oldest<br/>
+<a href="#Output-313151899" onClick='toggleBox("Output-313151899", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-313151899" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-313151899">
+The Method Name is: TestCase_Three<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.Filter_Transactions()'><b>Filter_Transactions</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify that user can filter the  transactions history<br/>
+<a href="#Output-972540998" onClick='toggleBox("Output-972540998", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-972540998" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-972540998">
+The Method Name is: Filter_Transactions<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494.Request_For_transaction_Statement()'><b>Request_For_transaction_Statement</b><br>Test class: testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494<br>Test method: Verify that user is prompted to request for transaction statement<br/>
+<a href="#Output-1492835531" onClick='toggleBox("Output-1492835531", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1492835531" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1492835531">
+The Method Name is: Request_For_transaction_Statement<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>testcases.Transaction_History_QTW_1494.Transaction_History_QTW1494@17497425</td></tr>
+<tr>
+<td title='testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533.Return_To_Service_Module()'><b>Return_To_Service_Module</b><br>Test class: testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br>Test method: Verify that users is returned to the service module<br/>
+<a href="#Output-47201251" onClick='toggleBox("Output-47201251", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-47201251" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-47201251">
+The Method Name is: Return_To_Service_Module<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533@316bcf94</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.AnnouncementCardIsPresentInQT()'><b>AnnouncementCardIsPresentInQT</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that Accouncement Card is present in QT upon initial login<br/>
+<a href="#Output-1963216371" onClick='toggleBox("Output-1963216371", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1963216371" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1963216371">
+The Method Name is: AnnouncementCardIsPresentInQT<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Earnings_History_QTW_1568.Earnings_History.TestCase_Six()'><b>TestCase_Six</b><br>Test class: testcases.Earnings_History_QTW_1568.Earnings_History<br>Test method: Verify that users can sort the earning using the year<br/>
+<a href="#Output-607192333" onClick='toggleBox("Output-607192333", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-607192333" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-607192333">
+The Method Name is: TestCase_Six<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>testcases.Earnings_History_QTW_1568.Earnings_History@3c7f66c4</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.AnnouncementCardSwitchingResumed()'><b>AnnouncementCardSwitchingResumed</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that the slide switches to the next slide after the mouse has been removed from the slide<br/>
+<a href="#Output-1687813541" onClick='toggleBox("Output-1687813541", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1687813541" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1687813541">
+The Method Name is: AnnouncementCardSwitchingResumed<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533.Wealth_Hub_Investement_Page()'><b>Wealth_Hub_Investement_Page</b><br>Test class: testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533<br>Test method: Verify that user is redirected to the investments page<br/>
+<a href="#Output-1861306060" onClick='toggleBox("Output-1861306060", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1861306060" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1861306060">
+The Method Name is: Wealth_Hub_Investement_Page<br/>
+The Status is: 1<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>testcases.infowre_frm_wlthhub_QTW1533.Infoware_Wlthub_QTW_1533@316bcf94</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.NavigateToQTLoans()'><b>NavigateToQTLoans</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can navigate to loans page from the Announcement Card<br/>
+<a href="#Output-1041229455" onClick='toggleBox("Output-1041229455", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1041229455" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1041229455">
+The Method Name is: cancelAnnouncementCard<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1041229455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1041229455'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.SkiptheAnnouncementCard()'><b>SkiptheAnnouncementCard</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can skip announcement card successfully<br/>
+<a href="#Output-1790139619" onClick='toggleBox("Output-1790139619", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1790139619" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1790139619">
+The Method Name is: AnnouncementCardisNotDisplayedonsubsequentLogin<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1790139619", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1790139619'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration()'><b>After_Registration</b><br>Test class: testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534<br>Test method: Verify that the alterna survey is suggested to user after a successful registration<br/>
+<a href="#Output-365795596" onClick='toggleBox("Output-365795596", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-365795596" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-365795596">
+The Method Name is: After_Registration<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]
+	at stepDefinition.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_Methods.Registration(Alterna_Survey_links_Methods.java:65)
+	at testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration(Alterna_Survey_links_QTW_1534.java:12)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace365795596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace365795596'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [https://customerfeedback.interswitchgroup.com/] but found [https://quickteller-innovation.k8.isw.la/dashboard]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at stepDefinition.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_Methods.Registration(Alterna_Survey_links_Methods.java:65)
+	at testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534.After_Registration(Alterna_Survey_links_QTW_1534.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>18</td>
+<td>testcases.Alterna_Survey_links_QTW_1534.Alterna_Survey_links_QTW_1534@53ce1329</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.NavigateToQTTransport()'><b>NavigateToQTTransport</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can navigate to transport page from the Announcement Card<br/>
+<a href="#Output-66068629" onClick='toggleBox("Output-66068629", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-66068629" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-66068629">
+The Method Name is: NavigateToQTLoans<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace66068629", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace66068629'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.NavigateToReferAfriendLinkCreated()'><b>NavigateToReferAfriendLinkCreated</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can navigate to Refer A friend page from the Announcement Card.(Already has Nickname/Refer Link Created)<br/>
+<a href="#Output-1474944287" onClick='toggleBox("Output-1474944287", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1474944287" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1474944287">
+The Method Name is: NavigateToQTTransport<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1474944287", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1474944287'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.cancelAnnouncementCard()'><b>cancelAnnouncementCard</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that user can cancel announcement card<br/>
+<a href="#Output-1469022856" onClick='toggleBox("Output-1469022856", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1469022856" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1469022856">
+The Method Name is: SkiptheAnnouncementCard<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1469022856", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1469022856'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.AnnouncementCardSwitchingisPaused()'><b>AnnouncementCardSwitchingisPaused</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that the slide pauses when user hover the mouse over the slide<br/>
+<a href="#Output-441599944" onClick='toggleBox("Output-441599944", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-441599944" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-441599944">
+The Method Name is: NavigateToReferAfriendLinkCreated<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace441599944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace441599944'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+<tr>
+<td title='testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507.AnnouncementCardisNotDisplayedonsubsequentLogin()'><b>AnnouncementCardisNotDisplayedonsubsequentLogin</b><br>Test class: testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507<br>Test method: Verify that the announcement card is not displayed on subsequent logins.</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace757632071", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace757632071'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [870480fda8d0f30e006725d6a8b5fe10, get {url=https://quickteller-innovation.k8.isw.la/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.118, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\DANIEL~1.OGA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58411/devtoo..., se:cdpVersion: 118.0.5993.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 870480fda8d0f30e006725d6a8b5fe10
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
+	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at base.Announcement_Card_QTW_1507.AnnouncementCardBrowserSetup.launch_browser(AnnouncementCardBrowserSetup.java:52)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
+	... 40 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.Announcement_Card_QTW_1507.AnnouncementCardQTW1507@ffaa6af</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.Listeners"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.Registration">
+        <methods>
+          <include name="successful_registration"/>
+          <include name="launch_browser"/>
+          <include name="close_browser"/>
+        </methods>
+      </class> <!-- testCases.Registration -->
+      <class name="testCases.My_bets">
+        <methods>
+          <include name="multiple_login"/>
+          <include name="invalid_login"/>
+          <include name="successful_cashout"/>
+          <include name="launch_browser"/>
+          <include name="successful_rebet_placement"/>
+          <include name="successful_login"/>
+          <include name="cancel_a_bet"/>
+          <include name="close_browser"/>
+        </methods>
+      </class> <!-- testCases.My_bets -->
+      <class name="testCases.Bet_Placement">
+        <methods>
+          <include name="successful_bet_placement"/>
+          <include name="multiple_login"/>
+          <include name="invalid_login"/>
+          <include name="launch_browser"/>
+          <include name="successful_login"/>
+          <include name="close_browser"/>
+        </methods>
+      </class> <!-- testCases.Bet_Placement -->
+      <class name="testCases.Login">
+        <methods>
+          <include name="multiple_login"/>
+          <include name="invalid_login"/>
+          <include name="launch_browser"/>
+          <include name="successful_login"/>
+          <include name="close_browser"/>
+        </methods>
+      </class> <!-- testCases.Login -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
